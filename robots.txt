@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://genesismollocondo.github.io/sitemap.xml
+Sitemap: https://genesismollocondo-source.github.io/sitemap.xml
