@@ -257,6 +257,61 @@
     padding: 22px;
   }
 }
+/* ENCABEZADO ORDENADO DE COMUNIDAD */
+
+#comunidad {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#comunidad > .wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+#comunidad > .wrap > .eyebrow {
+  width: 100%;
+  text-align: center !important;
+  margin: 0 0 18px !important;
+}
+
+#comunidad > .wrap > h2 {
+  width: 100%;
+  max-width: 850px !important;
+  text-align: center !important;
+  margin: 0 auto 18px !important;
+  line-height: 1.15 !important;
+}
+
+#comunidad > .wrap > p:not(.eyebrow) {
+  width: 100%;
+  max-width: 700px;
+  text-align: center !important;
+  margin: 0 auto 42px !important;
+}
+
+#comunidad > .wrap > .peers-grid {
+  width: 100%;
+  align-self: stretch;
+}
+
+@media (max-width: 600px) {
+  #comunidad > .wrap {
+    padding: 0 16px;
+  }
+
+  #comunidad > .wrap > h2 {
+    font-size: 2rem;
+  }
+}
+
 
 
 
