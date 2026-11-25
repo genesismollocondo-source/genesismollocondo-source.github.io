@@ -66,4 +66,96 @@
   color: #ffffff;
   transform: translateY(-2px);
 }
+/* REDISEÑO DE COMUNIDAD UNIVERSITARIA */
+
+#comunidad > .wrap {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr);
+  gap: 18px 48px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#comunidad > .wrap > .eyebrow {
+  grid-column: 1 / -1;
+}
+
+#comunidad > .wrap > h2 {
+  grid-column: 1;
+  max-width: 650px;
+  margin: 0;
+}
+
+#comunidad > .wrap > p:not(.eyebrow) {
+  grid-column: 2;
+  margin: 0;
+}
+
+#comunidad .peers-grid {
+  grid-column: 1 / -1;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#comunidad .peer-card {
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 25px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e8dcf3;
+  box-shadow: 0 5px 20px rgba(70, 40, 100, .06);
+}
+
+#comunidad .peer-card h3 {
+  margin: 0;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+#comunidad .peer-card a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 30px;
+  background: #eee5f8;
+  color: #7545a5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 850px) {
+  #comunidad > .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  #comunidad > .wrap > .eyebrow,
+  #comunidad > .wrap > h2,
+  #comunidad > .wrap > p:not(.eyebrow),
+  #comunidad .peers-grid {
+    grid-column: 1;
+  }
+
+  #comunidad .peers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  #comunidad .peers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
