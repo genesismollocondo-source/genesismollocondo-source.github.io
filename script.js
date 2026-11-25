@@ -1,1 +1,16 @@
-const toggle=document.querySelector('#toggle'),links=document.querySelector('#links');toggle?.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰'});links?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));
+const toggle = document.querySelector("#toggle");
+const links = document.querySelector("#links");
+
+toggle?.addEventListener("click", () => {
+  const isOpen = links.classList.toggle("open");
+  toggle.setAttribute("aria-expanded", String(isOpen));
+  toggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+});
+
+links?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    links.classList.remove("open");
+    toggle?.setAttribute("aria-expanded", "false");
+    toggle?.setAttribute("aria-label", "Abrir menú");
+  });
+});
