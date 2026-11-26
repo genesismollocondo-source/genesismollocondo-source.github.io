@@ -559,6 +559,110 @@ hr {
 #inicio h3 {
   color: #302923 !important;
 }
+/* =========================================
+   ESTILO EDITORIAL NUDE & CAFÉ (SKINCARE LUXURY)
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg-principal: #EFE6DD;      /* Crema arena suave (fondo principal) */
+  --bg-tarjeta: #FAF6F2;        /* Marfil cálido para tarjetas/cajas */
+  --texto-principal: #1C1917;   /* Negro carbón cálido (como el título "Latest skincare") */
+  --texto-secundario: #714329;  /* Marrón expreso profundo */
+  --acento: #18181B;            /* Negro elegante (como el botón "Shop Now") */
+  --acento-hover: #714329;      /* Cambia a café expreso al pasar el cursor */
+  --tono-terracota: #B08463;    /* Caramelo tostado para detalles y bordes */
+  --tono-arena-rosa: #D0B8A7;   /* Nude rosado suave */
+  --tono-taupe: #B5A192;        /* Gris topo cálido */
+}
+
+/* Fondo y tipografía general */
+body {
+  background-color: var(--bg-principal) !important;
+  color: var(--texto-principal) !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+  line-height: 1.7;
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Títulos con estética de revista de lujo */
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: var(--texto-principal) !important;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+p, li, span {
+  color: var(--texto-principal);
+}
+
+/* Enlaces en tono café expreso con subrayado sutil */
+a {
+  color: var(--texto-secundario);
+  text-decoration: none;
+  border-bottom: 1px solid var(--tono-terracota);
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  color: var(--acento);
+  border-bottom-color: var(--acento);
+}
+
+/* Botones estilo cápsula ("Shop Now" de tu imagen) */
+button, .btn, input[type="submit"] {
+  background-color: var(--acento) !important;
+  color: #FAF6F2 !important;
+  border: none !important;
+  border-radius: 50px !important; /* Bordes redondeados tipo píldora */
+  padding: 12px 28px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(113, 67, 41, 0.15);
+  transition: all 0.3s ease !important;
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover {
+  background-color: var(--acento-hover) !important; /* Se vuelve café expreso */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(113, 67, 41, 0.25);
+}
+
+/* Tarjetas y secciones en marfil cálido con bordes nude */
+section, article, .card, .container, header, footer {
+  border-radius: 16px;
+}
+
+.card, article {
+  background-color: var(--bg-tarjeta);
+  border: 1px solid var(--tono-arena-rosa);
+  box-shadow: 0 10px 30px -5px rgba(113, 67, 41, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover, article:hover {
+  transform: translateY(-3px);
+  border-color: var(--tono-terracota);
+  box-shadow: 0 15px 35px -5px rgba(113, 67, 41, 0.12);
+}
+
+/* Imágenes con bordes redondeados y sombra cálida */
+img {
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(113, 67, 41, 0.08);
+}
+
+/* Barra de selección de texto personalizada */
+::selection {
+  background-color: var(--tono-arena-rosa);
+  color: var(--texto-principal);
+}
 
 
 
