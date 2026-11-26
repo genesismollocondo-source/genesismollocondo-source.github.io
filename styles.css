@@ -532,6 +532,35 @@ hr {
   border-color: #E8DED2 !important;
 }
 
+/* GXM - AJUSTE FINAL DE IDENTIDAD EDITORIAL */
+
+#inicio h1,
+#inicio h1 em,
+#inicio h1 span,
+#inicio h1 strong {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 400 !important;
+}
+
+#inicio h1 {
+  color: #302923 !important;
+}
+
+#inicio h1 em,
+#inicio h1 span {
+  color: #A88965 !important;
+}
+
+#inicio .eyebrow {
+  color: #A88965 !important;
+}
+
+#inicio h2,
+#inicio h3 {
+  color: #302923 !important;
+}
+
+
 
 
 
