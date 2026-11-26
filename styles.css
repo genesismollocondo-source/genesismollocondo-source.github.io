@@ -381,6 +381,85 @@ hr {
   border-color: #E8DFE8;
 }
 
+/* =====================================
+   GXM | TIPOGRAFÍA EDITORIAL
+   ===================================== */
+
+/* Título principal de portada */
+
+#inicio h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  color: #292337;
+}
+
+/* Títulos de las secciones */
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: #292337;
+}
+
+/* Mantener la tipografía actual del contenido */
+
+h3,
+p,
+li,
+small,
+a,
+button {
+  font-family: inherit;
+}
+
+/* GXM - PALETA LUXURY EDITORIAL */
+
+:root {
+  --ink: #302923;
+  --champagne: #A88965;
+  --muted: #887E73;
+  --ivory: #F7F3EF;
+}
+
+/* Nombre principal */
+
+#inicio h1 {
+  color: #302923 !important;
+}
+
+/* Segunda línea del nombre */
+
+#inicio h1 em,
+#inicio h1 span {
+  color: #A88965 !important;
+}
+
+/* Títulos de las secciones */
+
+h2, h3 {
+  color: #302923;
+}
+
+/* Pequeños encabezados */
+
+.eyebrow {
+  color: #A88965;
+}
+
+/* Enlaces */
+
+a {
+  color: #806D59;
+}
+
+a:hover {
+  color: #A88965;
+}
+
+
+
 
 
 
