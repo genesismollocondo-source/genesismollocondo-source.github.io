@@ -661,6 +661,215 @@ body {
   backdrop-filter: blur(8px);
 }
 
+/* =========================================================
+   ACABADO EDITORIAL COMPLETO — GXM PORTAFOLIO (VERSIÓN FINAL)
+   ========================================================= */
+
+/* 1. Scrollbar personalizada en tonos arena y café expreso */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EFE6DD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B08463;
+  border-radius: 999px;
+  border: 2px solid #EFE6DD;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #714329;
+}
+
+/* 2. Selección de texto elegante */
+::selection {
+  background: #714329;
+  color: #FAF6F2;
+}
+
+/* 3. Fondo artesanal: textura de papel mate + ondas orgánicas + luz cálida */
+body::before, body::after {
+  display: none !important;
+}
+
+body {
+  background-color: #EFE6DD !important;
+  background-image: 
+    radial-gradient(circle at 78% 22%, rgba(176, 132, 99, 0.22) 0%, transparent 42%),
+    radial-gradient(circle at 18% 72%, rgba(214, 190, 173, 0.30) 0%, transparent 48%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='ruido'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23ruido)' opacity='0.035'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='360' height='360' viewBox='0 0 360 360' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 90 Q 90 30 180 90 T 360 90 M0 180 Q 90 120 180 180 T 360 180 M0 270 Q 90 210 180 270 T 360 270 M0 360 Q 90 300 180 360 T 360 360 M0 0 Q 90 -60 180 0 T 360 0' fill='none' stroke='%238D5B3E' stroke-width='0.9' stroke-opacity='0.22'/%3E%3C/svg%3E") !important;
+  background-size: 100% 100%, 100% 100%, 200px 200px, 360px 360px !important;
+  background-attachment: fixed !important;
+}
+
+/* 4. Barra de navegación flotante estilo cristal translúcido */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(239, 230, 221, 0.82) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(176, 132, 99, 0.25);
+  transition: background 0.3s ease;
+}
+
+/* 5. Subrayado animado deslizante en los enlaces del menú */
+.nav a:not(.brand) {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav a:not(.brand)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: #714329;
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav a:not(.brand):hover::after {
+  width: 100%;
+}
+
+/* 6. Sello principal "G XM" con iluminación 3D, halo cálido y aros arquitectónicos */
+@keyframes girarSuave {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.art {
+  position: relative;
+  background: radial-gradient(circle, rgba(176, 132, 99, 0.16) 0%, transparent 68%);
+  border-radius: 50%;
+}
+
+.art::before {
+  content: "";
+  position: absolute;
+  width: 268px;
+  height: 268px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(113, 67, 41, 0.32);
+  box-shadow: 0 0 0 20px rgba(176, 132, 99, 0.08);
+  pointer-events: none;
+}
+
+.art::after {
+  content: "";
+  position: absolute;
+  width: 325px;
+  height: 325px;
+  border-radius: 50%;
+  border: 1px dashed rgba(176, 132, 99, 0.45);
+  animation: girarSuave 45s linear infinite;
+  pointer-events: none;
+}
+
+.circle {
+  background: radial-gradient(circle at 30% 25%, #8D5B3E 0%, #6B3F26 65%, #4F2C19 100%) !important;
+  box-shadow: 
+    0 22px 45px rgba(79, 44, 25, 0.22),
+    inset 0 2px 6px rgba(255, 255, 255, 0.18) !important;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.circle:hover {
+  transform: scale(1.03);
+}
+
+/* 7. Cuadrícula de detalles en la sección "Sobre mí" */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(176, 132, 99, 0.32);
+}
+
+.about-grid span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #B08463;
+  margin-bottom: 6px;
+}
+
+.about-grid strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1C1917;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 8. Secciones con ligero efecto papel translúcido para dejar respirar las ondas */
+.intro, .future {
+  background: rgba(250, 246, 242, 0.90) !important;
+  backdrop-filter: blur(8px);
+}
+
+.courses {
+  background: rgba(232, 221, 210, 0.85) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* 9. Botones principales con elevación sutil y sombra cálida */
+.btn, .hero a, .contact a {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease !important;
+}
+
+.btn:hover, .hero a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(113, 67, 41, 0.16);
+}
+
+/* 10. Tarjetas de Cursos y Compañeros con elevación suave y brillo de borde */
+.card, .course-card, .peer-card {
+  background: #FAF6F2 !important;
+  border: 1px solid rgba(176, 132, 99, 0.32) !important;
+  box-shadow: 0 4px 16px rgba(113, 67, 41, 0.04);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease !important;
+}
+
+.card:hover, .course-card:hover, .peer-card:hover {
+  transform: translateY(-5px);
+  border-color: #B08463 !important;
+  box-shadow: 0 16px 32px rgba(113, 67, 41, 0.10) !important;
+}
+
+/* 11. Botones de portafolios de compañeros con transición sedosa */
+.peer-card a {
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease !important;
+}
+
+.peer-card:hover a {
+  background-color: #6B3F26 !important;
+  color: #FAF6F2 !important;
+}
+
+/* 12. Números de sección y detalles tipográficos */
+.eyebrow {
+  letter-spacing: 0.14em !important;
+  color: #8D5B3E !important;
+}
+
 
 
 
