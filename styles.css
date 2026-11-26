@@ -480,6 +480,147 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   ACABADO EDITORIAL DE LUJO — GXM PORTAFOLIO (VERSIÓN FINAL)
+   ========================================================= */
+
+/* 1. Scrollbar personalizada en tonos arena y café expreso */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EFE6DD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B08463;
+  border-radius: 999px;
+  border: 2px solid #EFE6DD;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #714329;
+}
+
+/* 2. Selección de texto elegante */
+::selection {
+  background: #714329;
+  color: #FAF6F2;
+}
+
+/* 3. Barra de navegación flotante estilo cristal translúcido */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(239, 230, 221, 0.82) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(176, 132, 99, 0.25);
+  transition: background 0.3s ease;
+}
+
+/* 4. Subrayado animado deslizante en los enlaces del menú */
+.nav a:not(.brand) {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav a:not(.brand)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: #714329;
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav a:not(.brand):hover::after {
+  width: 100%;
+}
+
+/* 5. Sello principal "G XM" con iluminación 3D y doble anillo arquitectónico */
+.art {
+  position: relative;
+}
+
+.art::before {
+  content: "";
+  position: absolute;
+  width: 268px;
+  height: 268px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(113, 67, 41, 0.32);
+  box-shadow: 0 0 0 20px rgba(176, 132, 99, 0.08);
+  pointer-events: none;
+}
+
+.art::after {
+  content: "";
+  position: absolute;
+  width: 325px;
+  height: 325px;
+  border-radius: 50%;
+  border: 1px dashed rgba(176, 132, 99, 0.45);
+  pointer-events: none;
+}
+
+.circle {
+  background: radial-gradient(circle at 30% 25%, #8D5B3E 0%, #6B3F26 65%, #4F2C19 100%) !important;
+  box-shadow: 
+    0 22px 45px rgba(79, 44, 25, 0.22),
+    inset 0 2px 6px rgba(255, 255, 255, 0.18) !important;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.circle:hover {
+  transform: scale(1.03);
+}
+
+/* 6. Botones principales con elevación sutil y sombra cálida */
+.btn, .hero a, .contact a {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease !important;
+}
+
+.btn:hover, .hero a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(113, 67, 41, 0.16);
+}
+
+/* 7. Tarjetas de Cursos y Compañeros con elevación suave y brillo de borde */
+.card, .course-card, .peer-card {
+  background: #FAF6F2 !important;
+  border: 1px solid rgba(176, 132, 99, 0.32) !important;
+  box-shadow: 0 4px 16px rgba(113, 67, 41, 0.04);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease !important;
+}
+
+.card:hover, .course-card:hover, .peer-card:hover {
+  transform: translateY(-5px);
+  border-color: #B08463 !important;
+  box-shadow: 0 16px 32px rgba(113, 67, 41, 0.10) !important;
+}
+
+/* 8. Botones de portafolios de compañeros con transición sedosa */
+.peer-card a {
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease !important;
+}
+
+.peer-card:hover a {
+  background-color: #6B3F26 !important;
+  color: #FAF6F2 !important;
+}
+
+/* 9. Números de sección y detalles tipográficos */
+.eyebrow {
+  letter-spacing: 0.14em !important;
+  color: #8D5B3E !important;
+}
 
 
 
