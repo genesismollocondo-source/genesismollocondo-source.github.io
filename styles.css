@@ -560,21 +560,29 @@ hr {
   color: #302923 !important;
 }
 /* =========================================
-   ESTILO EDITORIAL NUDE & CAFÉ (SKINCARE LUXURY)
+   ESTILO EDITORIAL NUDE & CAFÉ (SIN MORADOS)
    ========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --bg-principal: #EFE6DD;      /* Crema arena suave (fondo principal) */
-  --bg-tarjeta: #FAF6F2;        /* Marfil cálido para tarjetas/cajas */
-  --texto-principal: #1C1917;   /* Negro carbón cálido (como el título "Latest skincare") */
+  --bg-principal: #EFE6DD;      /* Crema arena suave */
+  --bg-tarjeta: #FAF6F2;        /* Marfil cálido */
+  --texto-principal: #1C1917;   /* Negro carbón cálido */
   --texto-secundario: #714329;  /* Marrón expreso profundo */
-  --acento: #18181B;            /* Negro elegante (como el botón "Shop Now") */
-  --acento-hover: #714329;      /* Cambia a café expreso al pasar el cursor */
-  --tono-terracota: #B08463;    /* Caramelo tostado para detalles y bordes */
+  --acento: #18181B;            /* Negro elegante */
+  --acento-hover: #714329;      /* Café expreso */
+  --tono-terracota: #B08463;    /* Caramelo tostado */
   --tono-arena-rosa: #D0B8A7;   /* Nude rosado suave */
   --tono-taupe: #B5A192;        /* Gris topo cálido */
+
+  /* Sobrescribir posibles variables moradas originales */
+  --primary: #714329 !important;
+  --primary-color: #714329 !important;
+  --secondary: #B08463 !important;
+  --accent: #714329 !important;
+  --purple: #714329 !important;
+  --violet: #714329 !important;
 }
 
 /* Fondo y tipografía general */
@@ -584,10 +592,9 @@ body {
   font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
   line-height: 1.7;
   margin: 0;
-  transition: background-color 0.3s ease;
 }
 
-/* Títulos con estética de revista de lujo */
+/* Títulos editoriales */
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', Georgia, serif !important;
   color: var(--texto-principal) !important;
@@ -595,11 +602,48 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-p, li, span {
-  color: var(--texto-principal);
+/* Eliminar el morado del texto "Universidad Católica San Pablo · Cuarto ciclo" */
+.subtitle, .university, .hero-subtitle, [class*="purple"], [class*="primary"], main p strong, header span {
+  color: var(--texto-secundario) !important;
 }
 
-/* Enlaces en tono café expreso con subrayado sutil */
+/* Reemplazar el morado del logo "G" y el círculo grande por Marrón Expreso */
+.logo-icon, .logo-badge, .avatar, .hero-circle, .circle, .monogram, [class*="logo"] span:first-child, [class*="circle"], [class*="badge"] {
+  background: linear-gradient(135deg, #714329, #B08463) !important;
+  background-color: #714329 !important;
+  color: #FAF6F2 !important;
+  box-shadow: 0 12px 30px rgba(113, 67, 41, 0.2) !important;
+}
+
+/* Reemplazar la sección morada oscura de "Conectemos." por Café Expreso */
+#contacto, .contact, .contact-section, section:last-of-type {
+  background-color: #4A2C1D !important; /* Café expreso oscuro y elegante */
+  color: #FAF6F2 !important;
+}
+
+/* Asegurar que los textos dentro de "Conectemos." se lean en blanco marfil */
+#contacto h2, .contact h2, .contact-section h2, section:last-of-type h2,
+#contacto p, .contact p, .contact-section p, section:last-of-type p,
+#contacto a, .contact a, .contact-section a, section:last-of-type a {
+  color: #FAF6F2 !important;
+}
+
+#contacto span, .contact span, section:last-of-type span,
+#contacto small, section:last-of-type small {
+  color: #D0B8A7 !important; /* Etiquetas en nude rosado */
+}
+
+/* Pie de página inferior (donde dice GXM. y Volver arriba) */
+footer, .footer {
+  background-color: #261710 !important; /* Chocolate amargo profundo */
+  color: #D0B8A7 !important;
+}
+
+footer p, footer span, footer a, .footer p, .footer span, .footer a {
+  color: #FAF6F2 !important;
+}
+
+/* Enlaces generales */
 a {
   color: var(--texto-secundario);
   text-decoration: none;
@@ -612,56 +656,32 @@ a:hover {
   border-bottom-color: var(--acento);
 }
 
-/* Botones estilo cápsula ("Shop Now" de tu imagen) */
-button, .btn, input[type="submit"] {
+/* Botones estilo cápsula */
+button, .btn, input[type="submit"], a[class*="btn"], .hero-buttons a {
   background-color: var(--acento) !important;
   color: #FAF6F2 !important;
   border: none !important;
-  border-radius: 50px !important; /* Bordes redondeados tipo píldora */
+  border-radius: 50px !important;
   padding: 12px 28px !important;
   font-family: 'Plus Jakarta Sans', sans-serif !important;
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(113, 67, 41, 0.15);
   transition: all 0.3s ease !important;
 }
 
-button:hover, .btn:hover, input[type="submit"]:hover {
-  background-color: var(--acento-hover) !important; /* Se vuelve café expreso */
+button:hover, .btn:hover, a[class*="btn"]:hover, .hero-buttons a:hover {
+  background-color: var(--acento-hover) !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(113, 67, 41, 0.25);
 }
 
-/* Tarjetas y secciones en marfil cálido con bordes nude */
-section, article, .card, .container, header, footer {
-  border-radius: 16px;
-}
-
+/* Tarjetas y contenedores */
 .card, article {
-  background-color: var(--bg-tarjeta);
-  border: 1px solid var(--tono-arena-rosa);
+  background-color: var(--bg-tarjeta) !important;
+  border: 1px solid var(--tono-arena-rosa) !important;
+  border-radius: 16px;
   box-shadow: 0 10px 30px -5px rgba(113, 67, 41, 0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover, article:hover {
-  transform: translateY(-3px);
-  border-color: var(--tono-terracota);
-  box-shadow: 0 15px 35px -5px rgba(113, 67, 41, 0.12);
-}
-
-/* Imágenes con bordes redondeados y sombra cálida */
-img {
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(113, 67, 41, 0.08);
-}
-
-/* Barra de selección de texto personalizada */
-::selection {
-  background-color: var(--tono-arena-rosa);
-  color: var(--texto-principal);
 }
 
 
