@@ -352,7 +352,53 @@ hr { border-color: var(--line); }
   #comunidad .peers-grid { grid-template-columns: 1fr; gap: 16px; }
   #comunidad .peer-card { padding: 22px; }
 }
+/* =========================================
+   FONDO EDITORIAL CON TEXTURA Y LUZ CÁLIDA
+   ========================================= */
 
+/* Fondo general con degradado sutil tipo papel de algodón */
+body {
+  background-color: #EFE6DD;
+  background-image: 
+    radial-gradient(at 85% 12%, rgba(176, 132, 99, 0.16) 0px, transparent 48%),
+    radial-gradient(at 10% 45%, rgba(208, 184, 167, 0.22) 0px, transparent 50%),
+    radial-gradient(at 90% 80%, rgba(176, 132, 99, 0.12) 0px, transparent 45%),
+    radial-gradient(rgba(113, 67, 41, 0.05) 1px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+  background-attachment: fixed;
+}
+
+/* Halo luminoso y anillo elegante alrededor del círculo "G" */
+.art::before {
+  content: "";
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(176, 132, 99, 0.22) 0%, rgba(239, 230, 221, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.circle {
+  position: relative;
+  z-index: 1;
+  outline: 1px solid rgba(176, 132, 99, 0.45);
+  outline-offset: 12px; /* Anillo fino exterior estilo lujo */
+}
+
+/* Efecto cristal translúcido en las secciones marfil */
+.intro, .future {
+  background: rgba(250, 246, 242, 0.85);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(208, 184, 167, 0.4);
+  border-bottom: 1px solid rgba(208, 184, 167, 0.4);
+}
+
+.courses {
+  background: rgba(232, 221, 210, 0.78);
+  backdrop-filter: blur(6px);
+}
 
 
 
