@@ -458,6 +458,81 @@ a:hover {
   color: #A88965;
 }
 
+/* ======================================
+   GXM | CORRECCION DE COLORES LUXURY
+   ====================================== */
+
+:root {
+  --ivory: #F7F3EF;
+  --paper: #FFFCF9;
+  --ink: #302923;
+  --champagne: #A88965;
+  --muted: #887E73;
+  --line: #E8DED2;
+}
+
+/* Fondo general */
+body {
+  background-color: #F7F3EF !important;
+  color: #302923 !important;
+}
+
+/* Nombre principal */
+#inicio h1 {
+  color: #302923 !important;
+}
+
+/* Apellido en champagne */
+#inicio h1 em {
+  color: #A88965 !important;
+}
+
+/* Títulos */
+h2, h3 {
+  color: #302923 !important;
+}
+
+/* Textos destacados */
+#inicio h2,
+#inicio h3,
+#inicio strong {
+  color: #302923 !important;
+}
+
+/* Encabezados pequeños */
+.eyebrow {
+  color: #A88965 !important;
+}
+
+/* Navegación */
+header a,
+header .brand {
+  color: #302923 !important;
+}
+
+/* Enlaces */
+a {
+  color: #806D59 !important;
+}
+
+a:hover {
+  color: #A88965 !important;
+}
+
+/* Botones */
+button,
+.btn,
+.button {
+  background-color: #A88965 !important;
+  border-color: #A88965 !important;
+}
+
+/* Separadores */
+hr {
+  border-color: #E8DED2 !important;
+}
+
+
 
 
 
