@@ -399,6 +399,56 @@ body {
   background: rgba(232, 221, 210, 0.78);
   backdrop-filter: blur(6px);
 }
+/* =========================================
+   FONDO ARQUITECTÓNICO & SELLO EDITORIAL
+   ========================================= */
+
+/* Cuadrícula arquitectónica fina + degradado cálido visible */
+body {
+  background-color: #EFE6DD !important;
+  background-image: 
+    linear-gradient(to right, rgba(176, 132, 99, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(176, 132, 99, 0.14) 1px, transparent 1px),
+    radial-gradient(circle at 82% 22%, rgba(176, 132, 99, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 15% 75%, rgba(208, 184, 167, 0.35) 0%, transparent 50%) !important;
+  background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100% !important;
+  background-attachment: fixed !important;
+}
+
+/* Doble arco decorativo detrás de tu círculo "G" (como en tu imagen de inspiración) */
+.art::before {
+  content: "";
+  position: absolute;
+  width: 265px;
+  height: 265px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(113, 67, 41, 0.35);
+  box-shadow: 0 0 0 18px rgba(176, 132, 99, 0.10);
+  pointer-events: none;
+}
+
+.art::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px dashed rgba(176, 132, 99, 0.45);
+  pointer-events: none;
+}
+
+/* Secciones sólidas con borde fino para que resalten sobre la cuadrícula */
+.intro, .future {
+  background: #FAF6F2 !important;
+  border-top: 1px solid #D0B8A7;
+  border-bottom: 1px solid #D0B8A7;
+}
+
+.courses {
+  background: #E6D9CC !important;
+  border-top: 1px solid #D0B8A7;
+  border-bottom: 1px solid #D0B8A7;
+}
 
 
 
