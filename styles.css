@@ -313,5 +313,75 @@
 }
 
 
+/* GXM - ACABADO EDITORIAL ELEGANTE */
+/* Sin modificar dimensiones ni distribución */
+
+:root {
+  --ivory: #F7F3EF;
+  --ink: #292337;
+  --muted: #81788A;
+  --lavender: #EAE2EE;
+  --champagne: #B89B75;
+}
+
+/* Fondo */
+
+body {
+  background-color: var(--ivory);
+  color: var(--ink);
+}
+
+/* Títulos: conservan su tipografía y dimensiones */
+
+h1, h2, h3 {
+  color: var(--ink);
+}
+
+/* Textos */
+
+p, li, small {
+  color: var(--muted);
+}
+
+/* Encabezados pequeños */
+
+.eyebrow {
+  color: #92769F;
+  letter-spacing: inherit;
+}
+
+/* Enlaces */
+
+a {
+  color: #80618E;
+  text-decoration-color: rgba(128, 97, 142, 0.35);
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: var(--champagne);
+}
+
+/* Selección de texto */
+
+::selection {
+  background: var(--lavender);
+  color: var(--ink);
+}
+
+/* Tarjetas: solo sombra, sin modificar bordes */
+
+.card, .peer-card {
+  box-shadow: 0 6px 24px rgba(41, 35, 55, 0.045);
+}
+
+/* Separadores */
+
+hr {
+  border-color: #E8DFE8;
+}
+
+
+
 
 
